@@ -44,7 +44,7 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           path: ./${{ github.sha }}.zip
-          name: source_code_with_libraries.zip
+          name: zipped-bundle
           asset_content_type: application/zip
 
   publish:
