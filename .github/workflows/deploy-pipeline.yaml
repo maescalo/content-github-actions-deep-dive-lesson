@@ -40,10 +40,11 @@ jobs:
             cd function
             zip -r ../${{ github.sha }}.zip .
       - name: Archive artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
-          name: zipped-bundle
-          path: ${{ github.sha }}.zip
+          name: my-artifact
+          path: my_file.txt
+          retention-days: 5
 
   publish:
     runs-on: ubuntu-latest
